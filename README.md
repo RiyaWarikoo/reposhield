@@ -2,7 +2,7 @@
 
 ## Project Title
 
-**RepoShield: Development of an AI-Powered Automated Code Review Platform with Integrated Application Security Auditing**
+**RepoShield: Developed an AI-Powered Automated Code Review Platform with Integrated Application Security Auditing**
 
 ## Abstract
 
@@ -57,7 +57,7 @@ Beyond reviewing code for structural quality, hidden bugs, and architectural des
 
 ## Proposed Solution
 
-- **Platform & Integration**: Develop a web-based dashboard that connects to GitHub repositories and uses webhooks to automatically monitor and retrieve new code changes when pull requests are submitted.
+- **Platform & Integration**: Developed a web-based dashboard that connects to GitHub repositories and uses webhooks to automatically monitor and retrieve new code changes when pull requests are submitted.
 - **Contextual Indexing**: Systematically index connected repositories by chunking source code and converting it into vector embeddings stored in a vector database (Pinecone) for semantic search.
 - **RAG-Powered Retrieval**: Upon a new pull request, perform similarity search techniques against the vector database to retrieve the most relevant, repository-wide context related to the modified code.
 - **AI-Driven Analysis**: Combine the pull request changes with the retrieved, broader repository context and process it through a generative AI model to produce comprehensive, structured code reviews (summaries, issues, suggestions).
