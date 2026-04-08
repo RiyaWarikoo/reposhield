@@ -1,5 +1,3 @@
-# RepoShield: AI-Powered Context-Aware Code Review Platform Using Retrieval-Augmented Generation
-
 ## Project Title
 
 **RepoShield: Developed an AI-Powered Automated Code Review Platform with Integrated Application Security Auditing**
