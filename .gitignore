@@ -1,6 +1,9 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# dependencies
+# Local-only folders (do not push to GitHub)
+.github
+
+
 /node_modules
 /.pnp
 .pnp.*

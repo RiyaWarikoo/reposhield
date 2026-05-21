@@ -2,22 +2,67 @@
 
 **RepoShield: Developed an AI-Powered Automated Code Review Platform with Integrated Application Security Auditing**
 
+**[View the full Non-Technical Product Overview here!](./wiki/Product-Overview.md)**
+
+---
+
+## Our Team
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" style="padding: 20px;">
+        <img src="./team/armaan-circle.png" width="120" height="120" alt="Armaan Singh Bhau"/><br/><br/>
+        <b>Armaan Singh Bhau</b><br/>
+        <sub>Project Lead & AI/RAG Specialist</sub>
+      </td>
+      <td align="center" style="padding: 20px;">
+        <img src="./team/ansh-circle.png" width="120" height="120" alt="Ansh Jamwal"/><br/><br/>
+        <b>Ansh Jamwal</b><br/>
+        <sub>Infrastructure & Backend Engineer</sub>
+      </td>
+      <td align="center" style="padding: 20px;">
+        <img src="./team/suryansh-circle.png" width="120" height="120" alt="Suryansh"/><br/><br/>
+        <b>Suryansh Singh Jasrotia</b><br/>
+        <sub>Frontend & Analytics Developer</sub>
+      </td>
+      <td align="center" style="padding: 20px;">
+        <img src="./team/riya-circle.png" width="120" height="120" alt="Riya Warikoo"/><br/><br/>
+        <b>Riya Warikoo</b><br/>
+        <sub>Security & Business Logic Engineer</sub>
+      </td>
+    </tr>
+  </table>
+</div>
+
+---
+
 ## Abstract
 
-The proposed project is a comprehensive, sophisticated, AI-powered platform strategically designed to automate and enhance the modern software development lifecycle by revolutionizing the traditional code review process. In fast-paced development environments, manual code reviews frequently become a severe bottleneck, heavily reliant on senior engineers and prone to inconsistencies. To resolve this, the system integrates seamlessly with GitHub repositories, actively monitoring incoming pull requests and immediately employing advanced Generative Artificial Intelligence to intensely analyze all code modifications.
+The proposed project is a comprehensive, sophisticated, AI-powered platform strategically designed to automate and enhance the modern software development lifecycle by revolutionizing the traditional code review process. In fast-paced development environments, manual code reviews frequently become a severe bottleneck, heavily reliant on senior engineers and prone to inconsistencies. 
 
-A major limitation of traditional automated tools is their tendency to scan changed files in isolation, completely missing crucial project-specific architectures. This platform overcomes such limitations by ingeniously utilizing a Retrieval-Augmented Generation (RAG) architecture. Powered by precise vector embeddings and a high-performance vector database, the system deeply indexes and comprehends the broader scope of the repository. This architectural advantage enables the AI to provide highly accurate, dynamically targeted feedback that perfectly aligns with the context of the entire codebase. 
+To resolve this, the system integrates seamlessly with GitHub repositories, actively monitoring incoming pull requests and immediately employing advanced Generative Artificial Intelligence to intensely analyze all code modifications.
 
-Beyond reviewing code for structural quality, hidden bugs, and architectural design flaws, the system functions as a vital, automated application security auditor. It proactively analyzes pull requests to detect potential security vulnerabilities, threat vectors, and dangerous coding practices long before the flawed code is ever merged into production. Ultimately, this innovative solution significantly reduces the extensive time and effort required for manual reviews, drastically minimizes the risk of overlooked vulnerabilities, and ensures a demonstrably more secure, highly efficient, and consistent development workflow for collaborative engineering teams.
+A major limitation of traditional automated tools is their tendency to scan changed files in isolation, completely missing crucial project-specific architectures. This platform overcomes such limitations by ingeniously utilizing a Retrieval-Augmented Generation (RAG) architecture. Powered by precise vector embeddings and a high-performance vector database, the system deeply indexes and comprehends the broader scope of the repository. 
+
+This architectural advantage enables the AI to provide highly accurate, dynamically targeted feedback that perfectly aligns with the context of the entire codebase. 
+
+Beyond reviewing code for structural quality, hidden bugs, and architectural design flaws, the system functions as a vital, automated application security auditor. It proactively analyzes pull requests to detect potential security vulnerabilities, threat vectors, and dangerous coding practices long before the flawed code is ever merged into production. 
+
+Ultimately, this innovative solution significantly reduces the extensive time and effort required for manual reviews, drastically minimizes the risk of overlooked vulnerabilities, and ensures a demonstrably more secure, highly efficient, and consistent development workflow for collaborative engineering teams.
 
 ---
 
 ## Project Overview
 
 - The proposed project aims to develop an AI-powered platform that automatically reviews pull requests in software repositories and provides intelligent feedback to developers.
+  
 - The system integrates Retrieval-Augmented Generation (RAG) and generative AI models to analyze code changes while considering the context of the entire repository.
+  
 - This project falls under the domain of Artificial Intelligence, Cloud-based Software Engineering, and DevOps Automation.
+  
 - With the rapid growth of collaborative development on platforms such as GitHub, efficient code review has become essential for maintaining code quality and security.
+  
 - The platform will assist developers, engineering teams, and organizations by providing automated, context-aware code review suggestions during the development lifecycle.
 
 ---
@@ -25,10 +70,15 @@ Beyond reviewing code for structural quality, hidden bugs, and architectural des
 ## Problem Statement
 
 - Modern software development relies heavily on collaborative workflows where developers submit pull requests for integrating code changes.
+  
 - Manual code reviews are time-consuming, inconsistent, and highly dependent on the availability of experienced engineers.
+  
 - As software repositories grow larger and more complex, reviewers often lack full visibility of the entire codebase, leading to missed architectural inconsistencies, hidden bugs, and potential security vulnerabilities.
+  
 - Existing automated code review tools typically analyze only the modified files within a pull request, without understanding the broader repository context.
+  
 - This limitation results in shallow or incomplete feedback that may not accurately reflect the impact of the code changes. Consequently, development teams experience delays, reduced productivity, and inconsistent code quality.
+  
 - Therefore, there is a need for a scalable, intelligent system that can analyze pull requests with full repository context and generate structured, automated code reviews using advanced AI techniques.
 
 ---
@@ -36,9 +86,13 @@ Beyond reviewing code for structural quality, hidden bugs, and architectural des
 ## How the Problem Was Identified
 
 - The problem was identified through observation of common challenges faced by developers during collaborative software development.
+  
 - In many teams, pull requests remain open for long periods due to delays in manual code reviews. Developers often depend on senior engineers for review feedback, creating bottlenecks in the development workflow.
+  
 - Further investigation revealed that existing automated tools provide limited contextual analysis because they evaluate only the changed files rather than the entire repository.
+  
 - Discussions within developer communities, technical blogs, and open-source forums also highlight the growing demand for intelligent developer tools that can assist with automated code analysis and review.
+  
 - These observations indicated the need for a more advanced system capable of providing context-aware insights during the code review process.
 
 ---
@@ -56,9 +110,13 @@ Beyond reviewing code for structural quality, hidden bugs, and architectural des
 ## Proposed Solution
 
 - **Platform & Integration**: Developed a web-based dashboard that connects to GitHub repositories and uses webhooks to automatically monitor and retrieve new code changes when pull requests are submitted.
+  
 - **Contextual Indexing**: Systematically index connected repositories by chunking source code and converting it into vector embeddings stored in a vector database (Pinecone) for semantic search.
+  
 - **RAG-Powered Retrieval**: Upon a new pull request, perform similarity search techniques against the vector database to retrieve the most relevant, repository-wide context related to the modified code.
+  
 - **AI-Driven Analysis**: Combine the pull request changes with the retrieved, broader repository context and process it through a generative AI model to produce comprehensive, structured code reviews (summaries, issues, suggestions).
+  
 - **Feedback & Visibility**: Store all generated reviews in the primary database for dashboard analytics, and optionally post the AI feedback directly as comments on the GitHub pull request for immediate developer visibility.
 
 ---
@@ -226,44 +284,56 @@ This creates a gap for a solution that combines semantic repository understandin
 - TanStack Query Documentation
 - Octokit GitHub API Documentation
 - Research articles on AI-assisted software development tools.
+## Local Development
 
-## V.E.T.S Justification
+To run this project locally, you will need a few services running simultaneously because it relies on background jobs (Inngest) and GitHub webhooks.
 
-### V – Viability
+### Prerequisites
+- Node.js (v18+)
+- [Bun](https://bun.sh/) package manager
+- PostgreSQL database (local or hosted like Supabase)
+- [ngrok](https://ngrok.com/) (to receive GitHub webhooks locally)
 
-- The project is feasible using available technologies such as the GitHub API, generative AI services, and vector databases, which provide the required infrastructure for development.
-- The development team has experience in full-stack development and AI integration, making it possible to implement the system within the project timeline.
+### 1. Install Dependencies
+```bash
+bun install
+```
 
-### E – Engineering Depth
+### 2. Environment Variables
+Copy `.env.example` to `.env` and fill in the required keys:
+- `DATABASE_URL` (Your PostgreSQL connection string)
+- `BETTER_AUTH_SECRET`, `GITHUB_CLIENT_ID`, `GITHUB_CLIENT_SECRET` (For authentication)
+- `GEMINI_API_KEY` (For AI reviews)
+- `POLAR_ACCESS_TOKEN`, `POLAR_WEBHOOK_SECRET` (For payments)
+- `GITHUB_APP_ID`, `GITHUB_PRIVATE_KEY`, `GITHUB_WEBHOOK_SECRET` (For the GitHub App)
 
-- The project involves the implementation of a Retrieval-Augmented Generation (RAG) pipeline, including repository indexing, vector embeddings, and semantic search for context-aware code analysis.
-- It requires integration of multiple system components such as AI models, GitHub APIs, databases, and background processing to automate pull request reviews.
+### 3. Database Setup
+```bash
+bunx prisma generate
+bunx prisma db push
+```
 
-### T – Trend Alignment
+### 4. Running the Application
+You will need to open 4 separate terminal windows to run all parts of the application locally:
 
-- The project aligns with the growing use of Artificial Intelligence and automation in software development tools to improve productivity and code quality.
-- It utilizes modern technologies such as Generative AI and RAG architectures, which are widely adopted in advanced AI-driven systems.
+**Terminal 1: Next.js Server**
+```bash
+bun run dev
+```
 
-### S – Social / Industrial Impact
+**Terminal 2: Background Jobs (Inngest)**
+```bash
+npx inngest-cli@latest dev
+```
 
-- The system helps development teams reduce manual review workload and improve efficiency in the software development process.
-- It contributes to better software quality by enabling early detection of issues and promoting consistent coding practices.
+**Terminal 3: Database GUI (Optional)**
+```bash
+bunx prisma studio
+```
 
-- Focus on automation to increase effiency and reduce manual effort
+**Terminal 4: Webhook Tunnel (ngrok)**
+```bash
+ngrok http 3000
+```
 
----
-
-## Research Work
-
-- Lewis, P. et al. (2020). *Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks*
-- Vaswani, A. et al. (2017). *Attention Is All You Need*
-- Official Documentation – GitHub
-- Pinecone Vector Database Documentation
-- Google Gemini AI Documentation
-- Prisma ORM Documentation
-- Next.js Official Documentation
-- TanStack Query Documentation
-- Octokit GitHub API Documentation
-- Research articles on AI-assisted software development tools.
-
-
+*Note: Make sure to update your GitHub App webhook URL and Better Auth trusted origins with your temporary ngrok URL!*

@@ -1,14 +1,18 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import LoginUI from '@/module/auth/components/login-ui'
 import { requireUnAuth } from '@/module/auth/utils/auth-utils'
+import { unstable_noStore as noStore } from 'next/cache'
 
 const LoginPage = async () => {
+    noStore();
     await requireUnAuth();
     return (
-        <div>
-            <LoginUI />
-        </div>
+        <Suspense>
+            <div>
+                <LoginUI />
+            </div>
+        </Suspense>
     )
 }
 
-export default LoginPage
+export default LoginPage
