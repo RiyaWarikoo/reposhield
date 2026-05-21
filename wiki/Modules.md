@@ -2,9 +2,7 @@
 
 Reposhield uses a strict **Feature-Module Architecture** to keep the Next.js `app/` directory clean and maintainable. Instead of mixing UI components, database calls, and AI logic in the same files, everything is separated by domain.
 
----
-
-##  Global Directory Structure
+###  Global Directory Structure
 
 ```text
 reposhield/
